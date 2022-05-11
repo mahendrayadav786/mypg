@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from pluggy import PluginManager
 
+from home.models import PG
 from .models import PG
 # Create your views here.
 def home(request):
@@ -18,13 +18,11 @@ def contact(request):
 def about(request):
     return render(request, "home/aboutus.html")
      
-     
 def rent(request):
+    all_pg = PG.objects.all()
     
-        
     
-    
-        return render(request, "home/rent.html", )
+    return render(request, "home/rent.html", {"all_pg": all_pg})
     
      
      
@@ -47,4 +45,10 @@ def addpg(request):
             
     return redirect("/")
                  
-                 
+
+ #HANDLING SIGNIN
+ 
+def signIn(request):
+    
+    return render(request, "home/signUp.html")
+       

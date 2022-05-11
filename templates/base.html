@@ -21,7 +21,23 @@
 <meta name="theme-color" content="#7952b3">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
    
-   
+<link href="https://fonts.googleapis.com/css2?
+
+family=Anton&family=Krona+One&display=swap" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" 
+
+href="https://cdnjs.cloudflare.com/ajax/libs/font-
+
+awesome/4.7.0/css/font-awesome.min.css">
+
+    <script 
+
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+</script>
    
     <link rel="stylesheet" href="css/styes.css">
 
@@ -113,9 +129,17 @@ font-size: 1.5rem;
     
       <li class="nav-item"> <a href="/contact" class="nav-link">CONTACTS</a> </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <form class="form-inline my-2 my-lg-0">{% csrf_token %}
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <form action = "/login/" method= "post" class= "form-inline my-2 my-lg-0">
+      {% csrf_token %}
+      <button class="btn btn-outline-success my-2 my-sm-0 mx-3" type="submit">Login</button>
+    </form>
+    <form action ="signIn/" method = "post" class="form-inline my-2 my-lg-0">
+      {% csrf_token %}
+      <button class="btn btn-outline-success my-2 my-sm-0 mx-2" type="submit">SignIn</button>
     </form>
   </div>
 </nav>

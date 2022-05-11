@@ -20,9 +20,27 @@ background-color:hsla(120,60%,70%,0.3);
 <br>
 
 
-
-
+{% for i in all_pg%}
 <div class="container my-4">
+  <div class="row my-2">
+    <div class="col-sm">
+      
+<div class="card" style="width: 18rem;">
+  <img src"{{MEDIA_URL}}{{i.image}}"  class="card-img-top zoom" alt="pgimage">
+  <div class="card-body">
+    <p class="card-text"><b>Name:</b>{{i.name}}</p>
+    <p class="card-text"><b>Rs:</b>{{i.rent}}</p>
+    <p class="card-text"><b>Location</b>{{i.address}}</p>
+      </div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+{% endfor %}
+{% comment %} <div class="container my-4">
     <div class="row my-2">
       <div class="col-sm">
         
@@ -58,7 +76,7 @@ background-color:hsla(120,60%,70%,0.3);
         </div>
       </div>
     </div>
-  </div>
+  </div> {% endcomment %}
 
 
 {%endblock body%}
