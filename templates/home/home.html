@@ -1,0 +1,165 @@
+{% extends "base.html"%}
+{%block title%}Home{% endblock title%}
+
+
+{%block css%}
+.carousel-item {
+  height: 65vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover
+  }
+ 
+
+.card-img-top{
+
+
+  height:250px;
+  }  
+
+.zoom {
+  
+  
+  transition: transform 4s; /* Animation */
+  
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.2); 
+}
+
+.card{
+  overflow: hidden;
+}
+
+
+
+.container-first-heading{
+
+  text-align: center;
+}
+
+.section-2{
+
+
+  background-color:#E4E9BE;
+}
+
+.container-fluid{
+  padding-right: 0px;
+    padding-left: 0px;
+}
+
+
+}
+
+{% endblock css%}
+{% load static %}
+
+{%block body%}
+
+  <div class="container-fluid">
+  <div id="indicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+  <li data-target="#indicators" data-slide-to="0" class="active"></li>
+  <li data-target="#indicators" data-slide-to="1"></li>
+  <li data-target="#indicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+  <!-- Slide One - Set the background image for this slide in the line below -->
+  <div class="carousel-item active" style="background-image: url('https://kripalhomes.com/wp-content/uploads/2020/08/3981c3aa-d5e7-4774-8fd3-5fb05871b4c7-e1625042129334.jpg')">
+    <div class="carousel-caption d-none d-md-block">
+      <h3 class="display-4">Best PG</h3>
+      <p class="lead">We are providing comfort to you!</p>
+      </div>
+  </div> <!-- Slide Two - Set the background image for this slide in the line below -->
+  <div class="carousel-item" style="background-image: url('https://cofynd-staging.s3.ap-south-1.amazonaws.com/images/original/6ddc3e8a94c2168a5c203eb5423c8d206718e68a.jpg')">
+    <div class="carousel-caption d-none d-md-block">
+      <h3 class="display-4">Best PG</h3>
+      <p class="lead">We are providing comfort to you!</p>
+      
+        
+      </div>
+  </div> <!-- Slide Three - Set the background image for this slide in the line below -->
+  <div class="carousel-item" style="background-image: url('https://okcredit-blog-images-prod.storage.googleapis.com/2020/12/shutterstock_1302323815.jpg')">
+    <div class="carousel-caption d-none d-md-block">
+      <h3 class="display-4">Best PG</h3>
+      <p class="lead">We are providing comfort to you!</p>
+      </div>
+  </div>
+  </div> <a class="carousel-control-prev" href="#indicators" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#indicators" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
+  </div>
+
+</div>
+
+  <!-- Page Content -->
+  <section class="py-5">
+  <div class="container container-first-heading">
+  <h1 class="font-weight-light">Select what you want from us!</h1>
+  </section>
+
+  <section class="py-5  section-2"  >
+    <div class="container my-4">
+      <div class="row">
+        <div class="col-sm">
+          
+    <div class="card" style="width: 18rem;">
+      <img src="{%static "images/1.jpeg"%}"  class="card-img-top zoom" alt="...">
+      <div class="card-body">
+        <p class="card-text"><b>Name:</b>XYZ pg</p>
+        <p class="card-text"><b>Rs:</b>1500</p>
+        <p class="card-text"><b>Location</b>Near khalsa college</p>
+        <button class="btn btn-primary">Book</button>
+          </div>
+    </div>
+    
+        </div>
+        <div class="col-sm">
+          <div class="card" style="width: 18rem;">
+            <img src="{%static "images/2.jpg"%}"  class="card-img-top zoom" alt="...">
+            <div class="card-body">
+              <p class="card-text"><b>Name:</b>XYZ pg</p>
+              <p class="card-text"><b>Rs:</b>1500</p>
+              <p class="card-text"><b>Location</b>Near khalsa college</p>
+              <button class="btn btn-primary">Book</button>
+                      </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card" style="width: 18rem;">
+            <img src="{%static "images/3.jpg"%}"  class="card-img-top zoom" alt="...">
+            <div class="card-body">
+              <p class="card-text"><b>Name:</b>XYZ pg</p>
+              <p class="card-text"><b>Rs:</b>1500</p>
+              <p class="card-text"><b>Location</b>Near khalsa college</p>
+              <button class="btn btn-primary">Book</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ </section>
+
+
+
+
+
+<script>
+  $(function() {
+  $(document).scroll(function() {
+  var $nav = $("#mainNavbar");
+  $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+  });
+  });
+  </script>
+
+
+
+
+
+{%endblock body%}
